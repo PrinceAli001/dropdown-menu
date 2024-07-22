@@ -4,11 +4,17 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-header img{
+img{
     height: 30px;
     width: 30px;
 }
+#menu{
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
 #background{
+    display: none;
     border-bottom: 1px solid;
     height: 200px;
     padding: 20px 5% 20px 5%;
@@ -18,4 +24,12 @@ header img{
     height: 53px;
     display: flex;
     align-items: center;
+}
+#background div:hover{
+    background-color: #0000ff;
+    color: #ffffff;
+}
+#background div:active{
+    background-color: #0000ff;
+    color: #ffffff;
 }
