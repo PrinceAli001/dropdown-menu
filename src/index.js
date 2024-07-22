@@ -7,6 +7,7 @@ display()
 function display() {
     let menu = document.querySelector('#menu');
     let background = document.querySelector('#background');
+    let backgroundDivs = document.querySelectorAll('.divs');
     let imgOne = document.createElement('img');
     let imgTwo = document.createElement('img');
     
@@ -30,6 +31,11 @@ function display() {
         
     }
 
+    backgroundDivs.forEach(element => {
+        element.addEventListener('click', () => {
+            alert('You clicked on one of the menu from the dropdown');
+        })
+    })
     menu.addEventListener('click', () => {
         hideAndReveal(menu,imgOne,background,imgOne,imgTwo);
     });
