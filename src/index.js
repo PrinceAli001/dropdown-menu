@@ -1,6 +1,7 @@
 import './style.css';
 import Menu from '../Images/menu.png';
 import Close from '../Images/close-thick.svg';
+import hideAndReveal from './hideAndReveal';
 
 display()
 
@@ -15,21 +16,6 @@ function display() {
     imgTwo.src = Close;
 
     menu.appendChild(imgOne);
-
-
-    function hideAndReveal(parent,child,element,pictureOne,pictureTwo) {
-        if (parent.contains(child)) {
-            element.setAttribute('style','display: block;');
-            parent.removeChild(pictureOne);
-            parent.appendChild(pictureTwo);
-            
-        } else {
-            element.setAttribute('style','display: none;');
-            parent.removeChild(pictureTwo);
-            parent.appendChild(pictureOne);
-        }
-        
-    }
 
     backgroundDivs.forEach(element => {
         element.addEventListener('click', () => {
